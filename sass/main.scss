@@ -1,17 +1,19 @@
 @import "partials/variables";
-@import "partials/mixins";
+@import "partials/reset";
 
 body {
-  background-color: $bg-color;
-  font-family: "Arial", sans-serif;
+  background-color: $white;
+  font-family: $primaryFont;
+  font-size: $baseFont;
+  color: $text;
 }
 
 // sass/partials/_variables.scss
-$bg-color: #f0f0f0;
+// $bg-color: #f0f0f0;
 
 // sass/partials/_mixins.scss
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
-}
+// @mixin border-radius($radius) {
+//   -webkit-border-radius: $radius;
+//   -moz-border-radius: $radius;
+//   border-radius: $radius;
+// }

@@ -21,3 +21,9 @@
 
 - views/admin/dashboard.ejs:
   Admin dashboard to manage menu items and view orders.
+
+Key Syntax in EJS
+<%= ... %>: Used to output variables (HTML-encoded).
+<%- ... %>: Used to output raw HTML (without escaping).
+<% include ... %>: Includes a partial or another file.
+<% layout('path/to/layout') %>: Tells EJS which layout to use for the page.
