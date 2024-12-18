@@ -3,7 +3,7 @@ import User from "../models/User.js";
 
 // Authentication Middleware
 export async function authenticate(req, res, next) {
-  const token = req.headers["x-auth-token"];
+  const token = req.cookies.authToken;
   if (!token)
     return res.status(401).json({ msg: "No token, authorization denied" });
 

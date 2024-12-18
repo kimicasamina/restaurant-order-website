@@ -28,6 +28,10 @@ const OrderSchema = new Schema({
     enum: ["Pending", "Completed"],
     default: "Pending",
   },
+  userAddress: {
+    type: String,
+    required: true,
+  },
 });
 
 const Order = model("Order", OrderSchema);

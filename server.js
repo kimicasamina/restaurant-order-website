@@ -2,7 +2,8 @@ import express from "express";
 import path from "path";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
-import authRoutes from "./routes/adminRoutes.js";
+import cookieParser from "cookie-parser"
+import authRoutes from "./routes/authRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 
@@ -15,6 +16,7 @@ connectDB();
 
 // Middleware
 app.use(express.json());
+app.use(cookieParser())
 app.use(express.static(path.join(__dirname, "public")));
 
 // View Engine

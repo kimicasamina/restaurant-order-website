@@ -1,6 +1,6 @@
 # Restauran Order Website
 
-## packages installed
+## Packages installed
 
 - express: Framework for building web apps.
 - mongoose: MongoDB object modeling tool.
@@ -10,3 +10,14 @@
 - dotenv: To manage environment variables.
   = multer: To handle file uploads (menu images).
 - body-parser: To parse incoming request bodies.
+
+## Views
+
+- views/auth/login.ejs and views/auth/register.ejs:
+  These templates allow users to register and log in.
+
+- views/user/menu.ejs:
+  Displays the restaurant menu for ordering.
+
+- views/admin/dashboard.ejs:
+  Admin dashboard to manage menu items and view orders.

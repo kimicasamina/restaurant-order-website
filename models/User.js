@@ -2,7 +2,11 @@ import { Schema, model } from "mongoose";
 import bcrypt from "bcryptjs";
 
 const UserSchema = new Schema({
-  name: {
+  firstname: {
+    type: String,
+    required: true,
+  },
+  lastname: {
     type: String,
     required: true,
   },
@@ -18,6 +22,10 @@ const UserSchema = new Schema({
   isAdmin: {
     type: Boolean,
     default: false,
+  },
+  address: {
+    type: String,
+    required: true,
   },
 });
 
