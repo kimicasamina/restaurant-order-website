@@ -22,10 +22,15 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // Routes
+app.get("/", function (req, res) {
+  console.log("SERVER IS READY");
+  res.send("SERVER IS READY");
+});
+
 app.use("/auth", authRoutes);
 app.use("/order", orderRoutes);
 app.use("/admin", adminRoutes);
 
-app.listen(8080, () => {
-  console.log("Server is running on port 3000");
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running on port ${process.env.PORT}`);
 });
