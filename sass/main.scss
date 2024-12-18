@@ -1,0 +1,17 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+body {
+  background-color: $bg-color;
+  font-family: "Arial", sans-serif;
+}
+
+// sass/partials/_variables.scss
+$bg-color: #f0f0f0;
+
+// sass/partials/_mixins.scss
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
