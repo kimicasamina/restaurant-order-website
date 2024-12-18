@@ -1,7 +1,7 @@
 // const MenuItem = require('../models/MenuItem');
 // const Order = require('../models/Order');
-import MenuItem from "../models/MenuItem";
-import Order from "../models/Order";
+import MenuItem from "../models/MenuItem.js";
+import Order from "../models/Order.js";
 
 export async function addMenuItem(req, res) {
   const { name, description, price } = req.body;

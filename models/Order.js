@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, mongoose } from "mongoose";
 
 const OrderSchema = new Schema({
   user: {
@@ -30,4 +30,6 @@ const OrderSchema = new Schema({
   },
 });
 
-export default model("Order", OrderSchema);
+const Order = model("Order", OrderSchema);
+export default Order;
+// export default model("Order", OrderSchema);

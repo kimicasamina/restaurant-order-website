@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+import { Schema, model } from "mongoose";
 
-const MenuItemSchema = new mongoose.Schema({
+const MenuItemSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -13,4 +13,9 @@ const MenuItemSchema = new mongoose.Schema({
   image: String, // Optionally store image URL
 });
 
-module.exports = mongoose.model("MenuItem", MenuItemSchema);
+const MenuItem = model("MenuItem", MenuItemSchema);
+export default MenuItem;
+
+// export default model("MenuItem", MenuItemSchema);
+// const taskModel = mongoose.model("task", taskSchema);
+// export default taskModel;

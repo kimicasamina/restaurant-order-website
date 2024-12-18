@@ -1,7 +1,7 @@
 // import Order, { find } from '../models/Order';
 // import { findById } from '../models/MenuItem';
-import Order from "../models/Order";
-import MenuItem from "../models/MenuItem";
+import Order from "../models/Order.js";
+import MenuItem from "../models/MenuItem.js";
 
 export async function placeOrder(req, res) {
   const { items } = req.body;

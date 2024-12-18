@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { hash, compare } from "bcryptjs";
+import bcrypt from "bcryptjs";
 
 const UserSchema = new Schema({
   name: {
@@ -24,13 +24,15 @@ const UserSchema = new Schema({
 // Password Hashing
 UserSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
-  this.password = await hash(this.password, 10);
+  this.password = await bcrypt.hash(this.password, 10);
   next();
 });
 
 // Compare Password
 UserSchema.methods.comparePassword = async function (password) {
-  return compare(password, this.password);
+  return bcrypt.compare(password, this.password);
 };
 
-export default model("User", UserSchema);
+// export default model("User", UserSchema);
+const User = model("User", UserSchema);
+export default User;
