@@ -9,12 +9,21 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  // border: solid 1px lime;
 }
 
 ol,
 ul {
   list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {

@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /* Roboto  */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 /* Rubik */
@@ -14,7 +16,7 @@
 $primary: #e75756;
 $secondary: #facd61;
 $gradient: #feeadf;
-$white: #fbfbfb;
+$bg: #fbfbfb;
 $headings: #2c2c2c;
 $text: #959595;
 
@@ -30,10 +32,12 @@ $secondaryFont: "Roboto";
 
 // LAYOUT
 $breakpoints: (
-  "xs": 0,
-  "sm": 576px,
-  "md": 768px,
-  "lg": 992px,
-  "xl": 1200px,
-  "xxl": 1600px,
+  "xs": 480px,
+  "sm": 768px,
+  "md": 1024px,
+  "lg": 1280px,
+  "xl": 1440px,
+  "xxl": 1660px,
 );
+
+$max-w-breakpoint: map.get($breakpoints, "xl");

@@ -2,15 +2,54 @@
   <div class="brand">
     <span class="brand__name">Foodie</span>
   </div>
-  <nav class="nav">
-    <li class="nav__item"><a href="/">Home</a></li>
-    <li class="nav__item"><a href="/offer">Offer</a></li>
-    <li class="nav__item"><a href="/services">Services</a></li>
-    <li class="nav__item"><a href="/menu">Menu</a></li>
-    <li class="nav__item"><a href="/about-us">About Us</a></li>
-  </nav>
-  <div class="cta">
-    <a href="#" class="cta__btn cta__btn--login">Login</a>
-    <a href="#" class="cta__btn cta__btn--signup">Sign Up</a>
+
+  <!-- mobile menu buttons  -->
+  <div class="mobile-menu">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      id="hamburger"
+      class="mobile-menu__icon mobile-menu__icon--open"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+      />
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      id="closeMenu"
+      class="mobile-menu__icon mobile-menu__icon--close"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+      />
+    </svg>
   </div>
+
+  <!-- mobile menu buttons  -->
+
+  <nav class="nav">
+    <ul class="navlinks">
+      <li class="navlinks__item"><a href="/">Home</a></li>
+      <li class="navlinks__item"><a href="/offer">Offer</a></li>
+      <li class="navlinks__item"><a href="/services">Services</a></li>
+      <li class="navlinks__item"><a href="/menu">Menu</a></li>
+      <li class="navlinks__item"><a href="/about-us">About Us</a></li>
+    </ul>
+    <div class="cta">
+      <a href="#" class="cta__btn cta__btn--login">Login</a>
+      <a href="#" class="cta__btn cta__btn--signup">Sign Up</a>
+    </div>
+  </nav>
 </header>

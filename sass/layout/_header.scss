@@ -1,0 +1,87 @@
+// <header class="header">
+//   <div class="brand">
+//     <span class="brand__name">Foodie</span>
+//   </div>
+//   <nav class="nav">
+//     <li class="nav__item"><a href="/">Home</a></li>
+//     <li class="nav__item"><a href="/offer">Offer</a></li>
+//     <li class="nav__item"><a href="/services">Services</a></li>
+//     <li class="nav__item"><a href="/menu">Menu</a></li>
+//     <li class="nav__item"><a href="/about-us">About Us</a></li>
+//   </nav>
+//   <div class="cta">
+//     <a href="#" class="cta__btn cta__btn--login">Login</a>
+//     <a href="#" class="cta__btn cta__btn--signup">Sign Up</a>
+//   </div>
+// </header>
+
+@use "../abstract/variables" as *;
+@use "../abstract/breakpoints" as *;
+
+.header {
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+
+  .mobile-menu {
+    @include sm {
+      display: none;
+    }
+
+    &__icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__icon--close {
+      display: none;
+    }
+
+    &__icon--open {
+      display: block;
+    }
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: calc(100% - 80px);
+    background-color: $bg;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  .navlinks {
+    @include sm {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  @include xl {
+    max-width: $max-w-breakpoint;
+    margin: 0 auto;
+  }
+}
+
+@include sm {
+  .nav {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+  }
+}

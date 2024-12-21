@@ -1,29 +1,40 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/*--- reddit mono ---*/
-@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
+/* Roboto  */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Rubik */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 /* Inter */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/*--- reddit mono ---*/
-@import url("https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap");
-/* Inter */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-* {
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  color: #959595;
-  line-height: 1.4;
+  width: 100%;
+  min-height: 100vh;
+  background: #fbfbfb;
+  font-family: "Inter";
   font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
+html {
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+ol,
 ul {
   list-style: none;
 }
@@ -32,11 +43,85 @@ li {
   list-style: none;
 }
 
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.home {
+  color: red;
+}
+
+.header {
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+@media (min-width: 768px) {
+  .header .mobile-menu {
+    display: none;
+  }
+}
+.header .mobile-menu__icon {
+  width: 24px;
+  height: 24px;
+}
+.header .mobile-menu__icon--close {
+  display: none;
+}
+.header .mobile-menu__icon--open {
+  display: block;
+}
+.header .nav {
+  display: none;
+}
+.header .nav.active {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100% - 80px);
   background-color: #fbfbfb;
-  font-family: "Inter";
-  font-size: 18px;
-  color: #959595;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+@media (min-width: 768px) {
+  .header .navlinks {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+@media (min-width: 1440px) {
+  .header {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

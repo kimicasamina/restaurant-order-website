@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 import authRoutes from "./routes/authRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
+import pageRoutes from "./routes/pageRoutes.js";
 import ejsLayouts from "express-ejs-layouts";
 
 dotenv.config();
@@ -27,11 +28,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("layout", "layouts/main");
 
 // Routes
-app.get("/", function (req, res) {
-  console.log("SERVER IS READY");
-  res.render("home/index", { title: "Home" });
-});
-
+app.use("/", pageRoutes);
 app.use("/auth", authRoutes);
 app.use("/order", orderRoutes);
 app.use("/admin", adminRoutes);
