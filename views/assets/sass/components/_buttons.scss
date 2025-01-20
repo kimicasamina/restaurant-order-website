@@ -1,0 +1,21 @@
+@use "../abstract/variables" as *;
+@use "../abstract/breakpoints" as *;
+
+// reset btns
+.btn {
+  display: inline-block;
+  text-decoration: none; /* Removes default underline */
+  margin: 0; /* Resets any margin */
+  line-height: 1; /* Resets line height to avoid extra space */
+  vertical-align: middle;
+  border: solid 1px $primary; /* Apply the primary color border */
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-weight: 500;
+  background-color: $white;
+  color: $primary;
+
+  /* Remove any extra border that may come from parent elements */
+  outline: none;
+  outline: none;
+}

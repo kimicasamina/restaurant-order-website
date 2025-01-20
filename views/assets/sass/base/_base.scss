@@ -1,0 +1,86 @@
+@use "../abstract/variables" as *;
+@use "../abstract/breakpoints" as *;
+
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: $white;
+  // color: $dark;
+  font-family: $primaryFont;
+  font-size: $baseFont;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+
+// h1,
+// h2 {
+//   color: $gray;
+//   line-height: 1.2;
+//   @include sm() {
+//     line-height: 1.4;
+//   }
+// }
+
+// h1 {
+//   font-size: 25px;
+//   font-weight: 700;
+
+//   @include sm() {
+//     font-size: 35px;
+//   }
+// }
+
+// h2 {
+//   font-size: $font-md;
+//   font-size: 20px;
+
+//   @include sm() {
+//     font-size: 30px;
+//   }
+// }
+
+// p {
+//   font-size: 16px;
+//   line-height: 1.5;
+// }
+
+// a,
+// a:visited,
+// a:active {
+//   text-decoration: none;
+//   color: $gray;
+// }
+
+// li {
+//   list-style-type: none;
+// }
+
+// /* Make images easier to work with */
+// img,
+// picture {
+//   max-width: 100%;
+//   display: block;
+// }
+
+// a {
+//   text-decoration: none;
+// }
+
+// button {
+//   outline: none;
+//   border: none;
+// }
+
+// input {
+//   // border: none;
+//   // border: solid 1px $primary;
+//   // outline: none;
+// }

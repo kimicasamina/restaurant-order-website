@@ -1,12 +1,12 @@
 {
   "name": "restaurant-order-website",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass:watch": "npx sass --watch sass/main.scss:public/css/style.css",
-    "sass": "npx sass sass/main.scss public/css/style.css",
+    "sass:watch": "npx sass --watch assets/sass/main.scss:public/css/style.css",
+    "sass": "npx sass assets/sass/main.scss public/css/style.css",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
